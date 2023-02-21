@@ -1,0 +1,158 @@
+                                             <!-- <h1>call function in angular</h1> -->
+
+<!-- <button (click)="getname()" > get name </button> -->
+<!-- <button (click)="myevent('this is click event')">click me</button> -->
+<!-- <br> -->
+<!-- <input type="text" /> -->
+                                               <!-- <h1>get test value in angular</h1> -->
+
+<!-- <input type="text" (keyup)="getval($event.target.value)" /> -->
+<!-- <h1>property bindng in angular</h1>
+<input type="text" [disabled]="disabledbox" [value]="name"/>
+<br> <br>
+
+<input type="text" disabled={{disabledbox}} value={{name}}/>
+<br> <br>
+<button (click)="enablebox()">enable textbox</button> -->
+
+                                                <!-- <h1>conditions in angular</h1>
+
+<h1 *ngIf="show=='yes';then ifblock else elseblock">
+
+</h1>
+<ng-template #ifblock>
+    <h1>if block</h1>
+</ng-template>
+
+<ng-template #elseblock>
+    <h1>else block</h1>
+</ng-template> -->
+<!-- <ng-template [ngIf]="show=='red'">
+<h1>red block</h1>
+</ng-template>
+<ng-template [ngIf]="show=='red'">
+    <h1>green block</h1>
+    </ng-template> -->
+
+                                                     <!-- switch case in angular -->
+
+<!-- <h1>switch case in angular</h1>
+<div [ngSwitch]="color" > 
+<h2 style="color:red;" *ngSwitchCase="'red'"> red color</h2>
+
+</div> -->
+                                                     <!-- <h1>for loop in angular</h1>
+<h4 *ngFor= "let item of data">
+    {{item.name}}
+{{item.age}}
+</h4> -->
+                                                        <!-- <h1>for loop in angular</h1>
+<table style="color:green" border="1">
+<tr>
+    <td>name</td>
+    <td>age</td>
+    
+</tr>
+
+    <tr *ngFor="let item of data">
+<td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+
+</tr>
+</table> -->
+                                        <!-- <h1>simple form in angular</h1>
+
+ <form >
+    <input type="text" name="username" placeholder="enter name" ng-model="firstname">
+    <br>
+    <input type="text" name="age" placeholder="enter age" ng-model="firstname">
+    <br>
+    <input type="password" name="password" placeholder="enter password" ng-model="firstname">
+    <br>
+    <button>get user value </button>
+  </form> -->
+  <!-- <app-header></app-header> -->
+                                  <!-- <h1>style binding in angular</h1> -->
+  <!-- <app-footer></app-footer> -->
+<!-- <h1 style="color: rgb(76, 138, 138);"> header </h1>
+<h1 [style.color]="'olive'" > header </h1>
+<h1 [style.color]="color"> dynamic style </h1>
+<h1 [style.color]="err?'red':'orange'">conditional style </h1>
+<button (click)="updateColor()">update color </button> -->
+<!-- &quot; -->
+
+    <!-- <div class="currentweather" id="current-forecast-block" style="background-image: url(https://www.skymetweather.com/themes/skymet/images/sky_background/sunny.svg?v=2);">
+        <label class="ch">CURRENT WEATHER</label>
+        <div class="row left-right-no-margin">
+            <div class="sky-icon"><div class="sky-icon"><img src="https://www.skymetweather.com/themes/skymet/images/sky_icons/day/sunny.svg"></div></div>
+            <div class="temperature">22<sup>o</sup></div>
+            <div class="location"><div class="location-state-tehshil">Bhopal<br>Bhopal</div></div>
+        </div>
+    </div> -->
+    <!-- <div  style="background-image: url('https://www.freepik.com/free-vector/flat-style-clouds-blue-shades-background_6864897.htm#query=weather%20background&position=3&from_view=keyword'); background-size:cover;"  class="lg-flex bg-left-bottom h-1/2 lg:w-[100%]"> -->
+    
+        <!-- <div class="container">
+            <div class="upper-data">
+        <img src="https://img.freepik.com/premium-photo/bright-sun-was-rising-cloudy-morning-sky_58717-580.jpg?size=626&ext=jpg&ga=GA1.1.403191039.1673949574&semt=sph" > -->
+<!-- <img src="" *ngIf="14>15">
+<img src="" *ngIf="14<=15"> -->
+
+
+
+<!-- <br>
+<br>
+<br>
+<br>
+<br> -->
+
+
+<div class="container" *ngIf="weatherData">
+    <div class="upper-data">
+        <img src="https://img.freepik.com/free-vector/oil-refinery-poster_1284-12014.jpg?size=626&ext=jpg&ga=GA1.2.403191039.1673949574&semt=sph" *ngIf="weatherData.main.temp>26">
+        <img src="https://img.freepik.com/free-photo/3d-wooden-table-looking-out-snowy-landscape_1048-9807.jpg?size=626&ext=jpg&ga=GA1.1.403191039.1673949574&semt=sph" *ngIf="weatherData.main.temp <=26" > 
+
+<div class="weather-data" >
+    <div class="location">{{weatherData.name}}</div> -->
+  <div class="temperature">{{weatherData.main.temp | number: '1.0-0' }}C</div> 
+</div>
+</div>
+<div class="lower-data">
+<div class="more-info-label">
+    More Information
+<div class="more-info-container"></div>
+    
+        <div class="info-block">
+            <div class="info-block-lable">
+<img src="   https://www.svgrepo.com/show/479297/weather-19.svg " >
+ <span>Min</span>
+
+<div class="info-block-value"> {{weatherData.main.temp_min | number: '1.0-0'}}C</div>
+
+
+    <div class="info-block">
+        <div class="info-block-lable">
+            <img src="  https://www.svgrepo.com/show/494028/weather-2.svg " >
+ <span>max</span>
+
+<div class="info-block-value">{{weatherData.main.temp_max}}C</div>
+
+
+<div class="info-block">
+    <div class="info-block-lable">
+        <img src="  https://www.svgrepo.com/show/479011/weather-rain.svg " >
+<span>humidity</span>
+
+<div class="info-block-value"> {{weatherData.main.humidity}}%</div>
+
+<div class="info-block">
+    <div class="info-block-lable">
+        <img src=" https://www.svgrepo.com/show/451960/weather-windy.svg" >
+<span>wind</span>
+
+<div class="info-block-value"> {{weatherData.wind.speed}}km/h</div>
+
+</div>
+</div>
+</div>  
+
+<!-- <app-root></app-root> -->
